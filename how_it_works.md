@@ -1,6 +1,6 @@
 # Feature Engineering
 
-### Based Features (1st model):
+### Based Features (1st model)
 
 + *day_mod* - take a modulo from day and gives the day range in [1,31]
 + *week_day* - day of week, to see the pattern of deamnd in a week
@@ -23,20 +23,20 @@ After the demand had been predicted *(y_pred)* by 1st model, this y_pred
 will be *shifted back for 1 step*, *moved average for 3 windows* and taken a *difference* between 
 those `mean_*` and `median_*` features. It generate the following features:
 
-Shift 1:
+**Shift 1:**
 
-+ *u_diff_lag* - a difference of *mean_demand_per_hour* and **shifted** y_pred
-+ *median_diff_lag* - a difference of *median_demand_per_hour* and **shifted** y_pred
-+ *u_diff_lag_week* - a difference of *mean_demand_per_week* and **shifted** y_pred
-+ *median_diff_lag_week* - a difference of *median_demand_per_week* and **shifted** y_pred
-+ *u_diff_lag_geo* - a difference of *mean_demand_per_geo* and **shifted** y_pred
-+ *median_diff_lag_geo* - a difference of *median_demand_per_geo* and **shifted** y_pred
++ *u_diff_lag* - a difference of *mean_demand_per_hour* and *shifted* y_pred
++ *median_diff_lag* - a difference of *median_demand_per_hour* and *shifted* y_pred
++ *u_diff_lag_week* - a difference of *mean_demand_per_week* and *shifted* y_pred
++ *median_diff_lag_week* - a difference of *median_demand_per_week* and *shifted* y_pred
++ *u_diff_lag_geo* - a difference of *mean_demand_per_geo* and *shifted* y_pred
++ *median_diff_lag_geo* - a difference of *median_demand_per_geo* and *shifted* y_pred
 
-Moving average:
+**Moving average:**
 
-+ *u_diff_rolling* - a difference of *mean_demand_per_hour* and **moving average** y_pred
-+ *u_diff_rolling_week* - a difference of *mean_demand_per_week* and **moving average** y_pred
-+ *u_diff_rolling_geo* - a difference of *mean_demand_per_geo* and **moving average** y_pred
++ *u_diff_rolling* - a difference of *mean_demand_per_hour* and *moving average* y_pred
++ *u_diff_rolling_week* - a difference of *mean_demand_per_week* and *moving average* y_pred
++ *u_diff_rolling_geo* - a difference of *mean_demand_per_geo* and *moving average* y_pred
 
 The reason to take a difference among them is to capture the seasonality of a week and hour.
 
