@@ -47,29 +47,29 @@ This predictor produces the results of both **T+1** and **T+5** stored under `re
 ```bash
 .
 +-- data
-    +-- diff_features
-        +-- diff_feats.csv
-    +-- gen_features
-        +-- checkpoint_1
-        +-- checkpoint_2
-    +-- u_median_features
-        +-- consec_zeros.csv
-        +-- median_demand_geo.csv
-        +-- median_demand_time.csv
-        +-- median_demand_week.csv
-        +-- u_demand_geo.csv
-        +-- u_demand_time.csv
-        +-- u_demand_week.csv
-    +-- training.csv
+|    +-- diff_features
+|    |   +-- diff_feats.csv
+|    +-- gen_features
+|    |   +-- checkpoint_1
+|    |   +-- checkpoint_2
+|    +-- u_median_features
+|    |   +-- consec_zeros.csv
+|    |   +-- median_demand_geo.csv
+|    |   +-- median_demand_time.csv
+|    |   +-- median_demand_week.csv
+|    |   +-- u_demand_geo.csv
+|    |   +-- u_demand_time.csv
+|    |   +-- u_demand_week.csv
+|    +-- training.csv
 +-- funcs
-    +-- geo_features.py
-    +-- helper.py
-    +-- prepare_train.py
-    +-- split_data.py
-    +-- time_features.py    
+|    +-- geo_features.py
+|    +-- helper.py
+|    +-- prepare_train.py
+|    +-- split_data.py
+|    +-- time_features.py    
 +-- model
-    +-- xgb_t_plus_1.model
-    +-- xgb_t_plus_1_2.model
+|    +-- xgb_t_plus_1.model
+|    +-- xgb_t_plus_1_2.model
 +-- results
 +-- gen_feats.py
 +-- gen_training_feats.py
