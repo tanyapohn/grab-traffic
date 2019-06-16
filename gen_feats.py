@@ -1,4 +1,3 @@
-from functools import reduce
 import gc
 import pandas as pd
 
@@ -94,12 +93,3 @@ def gen_features_t_plus_one(df: pd.DataFrame) -> pd.DataFrame:
     gc.collect()
 
     return df
-
-
-# print('\nGenerating ... \n')
-# data_val = gen_based_features('/home/tanyapohn/Documents/traffic-management/data/gen_features/checkpoint_1/val.csv')
-# data_val.drop(['demand'],axis=1,inplace=True)
-
-# data_val = gen_diff_features(data_val)
-# print('\nFinish generating ... \n')
-# data_val.to_csv('/home/tanyapohn/Documents/traffic-management/data/gen_features/val_t1_feats.csv', index=False)
