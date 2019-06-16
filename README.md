@@ -3,6 +3,7 @@
 ## Prerequisites
 
 This project contains end-to-end processes of a model prediction.
+
 To see my idea of creating features and models I described it [here](how_it_works.md)
 
 
