@@ -17,6 +17,8 @@
 + *y_coord* - a y coordinate extracted from geohash6
 + *z_coord* - an z coordinate extracted from geohash6
 
+To convert geohash6 in x, y, z coordinates is more meaningful than using geohash6 alone in regression 
+
 ### Diff Features (2nd model)
 
 After the demand had been predicted *(y_pred)* by 1st model, this y_pred
@@ -41,3 +43,27 @@ those `mean_*` and `median_*` features. It generate the following features:
 The reason to take a difference among them is to capture the seasonality of a week and hour.
 
 # Model
+
+I create 2 models for this project
+
+- First, it is an xgboost model producing a base demand from *geohash6, day and timestamp*.
+I would call it *y_pred*
+
+After *y_pred* has been create, this field will be sent to the second model.
+
+- My second model will take *y_pred* as a feature tranformed to those `Diff Features` 
+that I mentioned earlier. This model will predict **T+1** at the first step 
+and **T+5** afterwards.
+
+- To predict **T+5**, the demand value must have been predicted at T+2, T+3 and T+4 before
+as this following equation:
+
+```bash
+    T     =    1st_model(based_features)
+    T+1   =    2nd_model(T)
+    T+2   =    2nd_model(T+1)
+    .
+    .
+    .
+    T+5   =    2nd_model(T+4)
+``` 
