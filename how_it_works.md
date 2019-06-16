@@ -46,7 +46,7 @@ The reason to take a difference among them is to capture the seasonality of a we
 
 I create 2 models for this project
 
-- First, it is an xgboost model producing a base demand from *geohash6, day and timestamp*.
+- First, it is an Xgboost model producing a base demand from *geohash6, day and timestamp*.
 I would call it *y_pred*
 
 After *y_pred* has been create, this field will be sent to the second model.
@@ -67,3 +67,7 @@ as this following equation:
     .
     T+5   =    2nd_model(T+4)
 ``` 
+
+The reason I choose Xgboost is because the limitation of my RAM and time resource. 
+Since the data is too big, without fine tuning, Xgboost is the good choice of pruning 
+and boosting the regression tree.
