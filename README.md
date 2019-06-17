@@ -36,6 +36,10 @@ This predictor produces the results of both **T+1** and **T+5** stored under `re
 
 - `predictor.py` also automatically generates all features
 
+And it should run like this:
+
+![](image/running.png)
+
 For  training steps:
 - `gen_training_feats.py`: Create based features for 1st model from training set which produces
 features such as mean and median based on time interval, coverts geohash6 to x, y, z coordinates
