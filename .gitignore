@@ -1,0 +1,5 @@
+# Ignore training features
+
+./data/gen_features/*
+./data/diff_features/*
+./data/training.csv
