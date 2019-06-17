@@ -8,6 +8,9 @@ from funcs.time_features import make_day_feat, make_hour_minute_feat, make_time_
 
 
 def gen_based_features(test_path: str) -> pd.DataFrame:
+    """
+    Generate based features for the 1st model
+    """
 
     med_geo = reader("u_median_features/median_demand_geo.csv")
     med_time = reader("u_median_features/median_demand_time.csv")
@@ -47,6 +50,9 @@ def gen_based_features(test_path: str) -> pd.DataFrame:
 
 
 def gen_features_t_plus_one(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Generate diff features based on lagging 1 step back and rolling mean 3 windows for 2nd model
+    """
 
     df = df.sort_values(by=['geohash6', 'day', 'time'])
     df = df.reset_index(drop=True)

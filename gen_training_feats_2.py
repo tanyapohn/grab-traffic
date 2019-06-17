@@ -2,6 +2,13 @@ import os
 
 from funcs.split_data import reader
 
+"""
+
+This file creates diff features of training set before take it in 2nd model training step
+
+The training set with generated features is stored under ./data/gen_features/checkpoint_2
+
+"""
 
 this_dir = os.path.abspath("")
 data_path = os.path.join(this_dir, "data")

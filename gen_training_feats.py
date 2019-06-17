@@ -6,6 +6,17 @@ from funcs.prepare_train import fill_na, mean_or_median
 from funcs.split_data import splitter
 from funcs.time_features import make_day_feat, make_hour_minute_feat, make_time_feat, make_week_feat
 
+"""
+
+This file is to produce based features from training set in the Training pre-process step
+before take it in 1st model training step
+
+The training set with generated features is stored under ./data/gen_features/checkpoint_1
+
+After features had been creates, all of generated features will be stored under ./data/u_median_features
+
+"""
+
 this_dir = os.path.abspath("")
 data_path = os.path.join(this_dir, "data")
 gen_feats_path = os.path.join(data_path, "gen_features/checkpoint_1")
