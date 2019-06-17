@@ -6,6 +6,7 @@ This project contains end-to-end processes of a model prediction.
 
 To see my idea of creating features and models I described it [here](how_it_works.md)
 
+My jupyter notebooks for EDA, creating features and modeling is in `notebooks` dir of this repo
 
 ## Environment Setup
 1. This project uses the [pipenv](https://github.com/pyenv/pyenv-installer) as a virtual environment
@@ -13,12 +14,12 @@ To see my idea of creating features and models I described it [here](how_it_work
 2. Go to the root project and run the following:
 
     ```bash
-    pipenv install
+    $ pipenv install
     ``` 
 3. To start a virtual environment, run the following:
 
     ```bash
-    pipenv shell
+    $ pipenv shell
     ```
 
 ## Main Files
@@ -36,7 +37,7 @@ the difference between moving average and based features.
 To run the predictor:
 
 ``` bash
-python predictor.py --path [test_set_path] 
+$ python predictor.py --path [test_set_path] 
 ```
 
 where *[test_set_path]* is a specified absolute path of your _test_set.csv_.
