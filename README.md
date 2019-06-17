@@ -6,7 +6,7 @@ This project contains end-to-end processes of a model prediction.
 
 To see my idea of creating features and models I described it [here](how_it_works.md)
 
-My jupyter notebooks for EDA, creating features and modeling are in dir [notebooks](notebooks) of this repo
+My jupyter notebooks for EDA, creating features and modeling are in [notebooks](notebooks) dir  of this repo
 
 ## Environment Setup
 1. This project uses the [pipenv](https://github.com/pyenv/pyenv-installer) as a virtual environment
