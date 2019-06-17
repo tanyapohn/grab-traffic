@@ -25,7 +25,7 @@ Since the code in notebooks is not very clean, I would recommend you to look at 
 
 ## Main Files
 
-To run the predictor:
+To run the predictor, after initiate the virtual environment:
 
 ``` bash
 $ python predictor.py --path [test_set_path] 
