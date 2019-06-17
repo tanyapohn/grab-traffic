@@ -42,5 +42,9 @@ def make_hour_minute_feat(time_feat: pd.Series) -> Tuple:
 
 
 def make_week_feat(input_day: pd.Series) -> pd.Series:
+    """
+    Convert ordered day integer like to be day of week
+    range from 0 to 6 where 0:Monday, ..., 6:Sunday
+    """
     week_feat = input_day.apply(lambda x: x % 7.0)
     return week_feat

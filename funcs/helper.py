@@ -22,7 +22,7 @@ def count_consec_zeros(df: pd.DataFrame) -> pd.DataFrame:
     """
     Count consecutive demand values of 0s
     :param df: A DataFrame that is sorted by 'geohash6', 'day', 'time'
-    :return:
+    :return: An increment number of consecutive zeros
     """
 
     g = df['demand'].ne(df['demand'].shift(1)).cumsum()
