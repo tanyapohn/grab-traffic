@@ -40,7 +40,7 @@ those `mean_*` and `median_*` features. It generate the following features:
 + *u_diff_rolling_week* - a difference of *mean_demand_per_week* and *moving average* y_pred
 + *u_diff_rolling_geo* - a difference of *mean_demand_per_geo* and *moving average* y_pred
 
-The reason to take a difference among them is to capture the seasonality of a week and hour.
+The reason to take a difference among them is to capture the pattern of a week and hour.
 
 # Model
 
