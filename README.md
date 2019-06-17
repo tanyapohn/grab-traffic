@@ -25,26 +25,30 @@ Since the code in notebooks is not very clean, I would recommend you to look at 
 
 ## Main Files
 
-For  training steps:
-- `gen_training_feats.py`: Create based features from training set which produces
-features such as mean and median based on time interval, coverts geohash6 to x, y, z coordinates
-and a consecutive values of 0s demand
-
-- `gen_training_feats_2.py`: After the based features had been created, this method allows to generate
-the difference between moving average and based features.
-
-- `trainer.py`: Train the model
-
 To run the predictor:
 
 ``` bash
 $ python predictor.py --path [test_set_path] 
 ```
 
-where *[test_set_path]* is a specified absolute path of your _test_set.csv_.
+where *[test_set_path]* is a specified absolute path of your _test_set.csv_ in string format.
 This predictor produces the results of both **T+1** and **T+5** stored under `results` directory of this project.
 
 - `predictor.py` also automatically generates all features
+
+For  training steps:
+- `gen_training_feats.py`: Create based features for 1st model from training set which produces
+features such as mean and median based on time interval, coverts geohash6 to x, y, z coordinates
+and a consecutive values of 0s demand
+
+- `gen_training_feats_2.py`: After the based features had been created, this method allows to generate
+the difference between moving average and based features for 1nd model.
+
+- `trainer.py`: Train the models
+
+- `training_T_plus_1_xgb.ipynb`, `training_T_plus_5_xgb.ipynb` : Train the 1st model and 2nd model in jupyter notebook 
+*(It's not very clean, but I want to show you how I trained them)*
+
 
 ## File Structure
 ```bash
