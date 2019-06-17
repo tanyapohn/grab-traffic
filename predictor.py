@@ -47,7 +47,7 @@ if __name__ == '__main__':
     X_test = data_test[BASED_COLS]
     matrix_test = xgb.DMatrix(X_test)
 
-    demand_pred = bst.predict(matrix_test)
+    demand_pred = bst.predict(matrix_test, ntree_limit=int(bst.attributes()['best_iteration']))
     # create base demand prediction
     demand_pred_series = pd.Series(demand_pred, name='y_pred')
 
@@ -71,7 +71,7 @@ if __name__ == '__main__':
 
         df_t_test = df_t[DIFF_COLS]
         matrix_test_t_plus = xgb.DMatrix(df_t_test)
-        demand_pred_t_plus = bst_2.predict(matrix_test_t_plus)
+        demand_pred_t_plus = bst_2.predict(matrix_test_t_plus, ntree_limit=int(bst_2.attributes()['best_iteration']))
 
         demand_pred_series = pd.Series(demand_pred_t_plus, name='y_pred')
 
